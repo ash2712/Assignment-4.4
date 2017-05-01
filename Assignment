@@ -1,0 +1,40 @@
+public class MyClass{
+	
+		public static void main(String s[])
+		{
+		Trainees t = new Trainees();
+		Managers m = new Managers();
+		m.printSalary();
+		t.printSalary();
+		} 
+}
+
+class Workers{	
+	
+	int travelAllowance;
+	int salary;
+	
+	
+	void printSalary(){
+		
+	}
+}
+
+class Trainees extends Workers{
+	
+	void printSalary(){
+		salary = 40000;
+		travelAllowance = salary * 10/100;
+		System.out.println("Travel Allowance for trainees out of " + salary + " is " + travelAllowance);
+	}
+	
+}
+
+class Managers extends Workers{
+	void printSalary(){
+		salary = 60000;
+		travelAllowance = salary * 15/100;
+		System.out.println("Travel Allowance for manager out of " + salary + " is " + travelAllowance);
+	}
+	
+}
